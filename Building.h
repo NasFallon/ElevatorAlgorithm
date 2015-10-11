@@ -1,10 +1,9 @@
 #include <iostream> 
 #include <vector>
-#include "Elevator.cpp"
 
 using namespace std;
 
-Building::Building{
+class Building{
 
 public: 
   int Num_floors;

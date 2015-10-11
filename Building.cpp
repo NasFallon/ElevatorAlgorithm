@@ -1,6 +1,7 @@
 #include <iostream> 
 #include <vector>
 #include "Elevator.h"
+#include "Building.h"
 
 using namespace std;
 
