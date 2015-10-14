@@ -31,18 +31,28 @@ int main(int argc, const char * argv[])
   c.Start_floor = 0; 
   c.End_floor = 2; 
   Person d; 
-  d.Start_floor = 1; 
+  d.Start_floor = 0; 
   d.End_floor = 5; //= new Person(1, 5); 
+  Person e; 
+  e.Start_floor = 0; 
+  e.End_floor = 22; //= new Person(1, 5);  
+  Person f; 
+  f.Start_floor = 0; 
+  f.End_floor = 1; //= new Person(1, 5); 
+  Person g; 
+  g.Start_floor = 0; 
+  g.End_floor = 53; //= new Person(1, 5); 
+
   E.addPerson(a);
   E.addPerson(b);
   E.addPerson(c);
-  for(int i = 0; i < E.People.size(); i++){
-    cout << "start and end floor: " << E.People.at(i).Start_floor << " " << E.People.at(i).End_floor << endl;
-  }
-    
+  E.addPerson(d);  
+  E.addPerson(e);  
+  E.addPerson(f);
+  E.addPerson(g); 
   sort(E.People.begin(), E.People.end());
   for(int i = 0; i < E.People.size(); i++){
-    cout << "start and end floor: " << E.People.at(i).Start_floor << " " << E.People.at(i).End_floor << endl; 
+    cout << E.People.at(i).End_floor << endl; 
   }
   return 0;
 }

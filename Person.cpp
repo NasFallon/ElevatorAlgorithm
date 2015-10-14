@@ -22,6 +22,9 @@ Person::Person(int new_Start_floor, int new_End_floor)
 {
   Start_floor = new_Start_floor;
   End_floor = new_End_floor;
+  if(Start_floor - End_floor > 0)
+    direction = true; 
+  else direction = false; 
 }
 
 bool Person::operator < (Person p){
@@ -38,4 +41,8 @@ int Person::getStart_floor()
 int Person::getEnd_floor()
 {
   return End_floor;
+}
+
+int Person::getDirection(){
+  return direction; 
 }

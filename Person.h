@@ -14,6 +14,7 @@ class Person{
   Person(); 
   Person(int new_Start_floor, int new_End_floor); 
   bool operator < (Person p); 
+  bool direction; //up = true, down = false
   int getStart_floor(); 
   int getEnd_floor(); 
   int Start_floor; 
