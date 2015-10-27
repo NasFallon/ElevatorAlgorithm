@@ -80,10 +80,14 @@ void Building::setGoal(int n)
 
 void Building::addPerson(Person &P)
 {
+
+  //what is the point of having both this and addPeople?
+
     Elevator E;
     People.push_back(P);
     cout << People[0].End_floor << endl;
     P.addTime(E.goToFloor(People[0].Start_floor));//adds time it takes for elevator to pick person up
+    //why don't you add p?
     E.addPerson(People[0]);
     E.goToFloor(People[0].End_floor);    //travel time
     cout << "Total Time : " << People[0].Time << " seconds" << endl;
@@ -93,9 +97,15 @@ void Building::addPerson(Person &P)
 void Building::addPeople(vector<Person> &P)
 {
     Elevator E;
-    People.push_back(P[1]);
-    People.push_back((P[2]));
+    //    People.push_back(P[1]);
+    //People.push_back((P[2]));
+    
+    //what does the line below do?
+
     //E.calculateTravelTime(E.Current_floor, <#int end_floor#>)
+    
+    //P is a vector, you can't do these memeber functions on it
+
     //P.addTime(E.goToFloor(P.Start_floor)); //adds time it takes for elevator to pick person up
     //P.addTime(E.goToFloor(P.End_floor));    //travel time
     //People.pop_back();
@@ -109,6 +119,14 @@ void Building::addPeople(vector<Person> &P)
     //    {
     //        cout << v[i] << endl;
     //    }
-     
-    
+}
+
+
+void Building::generateRequests(int numRequests){
+  vector<Person> p; 
+  for(int i = 0; i < numRequests; i++){
+    Person temp(0, rand() % Num_floors); 
+    addPerson(temp);
+  }
+  addPeople(p);
 }

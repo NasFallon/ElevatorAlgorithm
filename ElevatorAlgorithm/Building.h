@@ -43,5 +43,5 @@ class Building{
   //Elevator calls
   void addPerson(Person &P);
   void addPeople(vector<Person> &P);
-  vector<Person> generatePeople(); 
+  void generateRequests(int numRequests); 
 };

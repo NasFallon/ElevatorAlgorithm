@@ -59,8 +59,9 @@ void Building::setGoal(int n){
   goal = n;
 }
 
-void generateRequests(){
-  for(int i = 0; i < 100; i++){
-    Person p(); 
-    
+vector<string> Building::generateRequests(int numRequests){
+  for(int i = 0; i < numRequests; i++){
+    Person p(0, rand() % numRequests); 
+    cout << p.getStart_floor() << p.getEnd_floor() << "\n"; 
+  }
 }
