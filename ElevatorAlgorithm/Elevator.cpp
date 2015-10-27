@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <vector>
+
 #include "Person.h"
 #include "Elevator.h"
 
@@ -73,7 +74,9 @@ void Elevator::addPerson(Person P)
 
 float Elevator::calculateTravelTime(int start_floor, int end_floor)
 {
-    int  floor_difference = abs(start_floor - end_floor);
+    int floor_difference = (start_floor - end_floor);
+    if(floor_difference < 0) //absolute value
+      floor_difference *= -1; 
     if (floor_difference == 0)
     {
         return 0;

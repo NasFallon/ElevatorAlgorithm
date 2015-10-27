@@ -15,7 +15,6 @@
 
 using namespace std;
 
-
 class Elevator
 {
     private:
@@ -27,7 +26,7 @@ class Elevator
 
     
     public:
-        vector<vector<Person>> People;
+        vector<vector<Person> > People;
         int Rest_floor;
         int Current_floor;
     
@@ -42,10 +41,7 @@ class Elevator
         float calculateTravelTime(int start_floor, int end_floor);
         float calculateElevatorLocation(int start_floor, int end_floor, float time);
         float goToFloor(float new_floor);
-        void unload();
-    
-    
-    
+        void unload();   
 };
 
 #endif

@@ -13,15 +13,11 @@
 
 using namespace std;
 
-
 int main(int argc, const char * argv[])
 {
-
-    // insert code here...
-    //std::cout << "Hello, World!\n";
-    Building B;
-    Person P;
-    B.addPerson(P);
-    return 0;
+  Building B;
+  Person P;
+  B.addPerson(P);
+  return 0;
 }
 

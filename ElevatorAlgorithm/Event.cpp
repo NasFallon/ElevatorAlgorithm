@@ -73,4 +73,3 @@ float Event::Go(float timeLeft)
     
     return start_floor;
 }
-

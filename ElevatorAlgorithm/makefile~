@@ -1,0 +1,3 @@
+Proj : Building.cpp Building.h Elevator.cpp Elevator.h Event.cpp Event.h Person.cpp Person.h main.cpp
+	g++ -g Building.cpp Elevator.cpp Event.cpp Person.cpp main.cpp
+      

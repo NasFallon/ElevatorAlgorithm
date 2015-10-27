@@ -1,11 +1,8 @@
-
-
-
 #include "Building.h"
 
 Building::Building()
 {
-    Num_floors = 2;
+    Num_floors = 3;
     Num_elevators = setNum_elevators(1);
     Resting_floor = setResting_floor(1);
     Goal = 0; 
@@ -104,16 +101,14 @@ void Building::addPeople(vector<Person> &P)
     //People.pop_back();
     //cout << "Total Time : " << P.Time << " seconds" << endl;
     
-    vector<int> v = *new vector<int> ({4, 2, 3});
-    sort(v.begin(), v.end());
-    //v.erase(v.begin(), v.end());
-    for (int i = 0; i < v.size(); i++)
-    {
-        cout << v[i] << endl;
-    }
+    //    vector<int> v = *new vector<int> ({4, 2, 3});
+    //    vector<int> v; 
+    //    sort(v.begin(), v.end());
+    //    v.erase(v.begin(), v.end());
+    //    for (int i = 0; i < v.size(); i++)
+    //    {
+    //        cout << v[i] << endl;
+    //    }
      
     
 }
-
-
-
