@@ -6,55 +6,61 @@
 using namespace std;
 
 Building::Building(){
-  Num_floors = 0; 
-  Num_elevators = setNum_elevators(0); 
-  Resting_floor = setResting_floor(0); 
-  Goal = 0; 
-  Type = "";
-  for(int i = 0; i < Num_elevators; i++){
+  numFloors = 0; 
+  setnumElevators(0); 
+  setrestingFloor(0); 
+  goal = 0; 
+  type = "";
+  for(int i = 0; i < numElevators; i++){
     //create a vector of elevator objects representing for each 
     //elevator in the building
     Elevators.push_back(Elevator()); 
   }
 }
-Building::Building(int numFloors, int goal, string type){
+Building::Building(int _numFloors, int _goal, string _type){
   //full constructor
-  Num_floors = numFloors; 
-  Num_elevators = setNum_elevators(numFloors); 
-  Resting_floor = setResting_floor(numFloors); 
-  Goal = goal; 
-  Type = type; 
+  numFloors = _numFloors; 
+  setnumElevators(_numFloors); 
+  setrestingFloor(_numFloors); 
+  goal = _goal; 
+  type = _type; 
 } 
   //get functions:
-int Building::getNum_floors(){
-  return Num_floors; 
+int Building::getnumFloors(){
+  return numFloors; 
 }
-int Building::getResting_floor(){
-  return Resting_floor; 
+int Building::getrestingFloor(){
+  return restingFloor; 
 }
 int Building::getGoal(){
-  return Goal;
+  return goal;
 }
 string Building::getType(){
-  return Type; 
+  return type; 
 }
 //set functions:
-int Building::setNum_floors(int n){ //n: number of floors
-  return n; 
+void Building::setnumFloors(int n){ //n: number of floors
+  numFloors = n; 
 }
-int Building::setResting_floor(int n){ //n: size of building
+void Building::setrestingFloor(int n){ //n: size of building
   //set the resting floor to be half of the building size
   if(n < 1)
-    return 0;
+    restingFloor = 0;
   else 
-    return n / 2;
+    restingFloor = n / 2;
 }
-int Building::setNum_elevators(int n){ //n: number of floors
+void Building::setnumElevators(int n){ //n: number of floors
   if(n < 1)
-    return 0; 
+    numElevators = 0; 
   else 
-    return 1; //set it equal to 1 until we are ready for multiple elevators
+    numElevators = 1; //set it equal to 1 until we are ready for multiple elevators
 }
 void Building::setGoal(int n){
-  Goal = n;
+  goal = n;
+}
+
+void generateRequests(){
+  for(int i = 0; i < 100; i++){
+    Person p(); 
+    
 }

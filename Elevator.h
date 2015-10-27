@@ -12,30 +12,28 @@
 #include <iostream>
 #include <vector>
 #include "Person.h"
+#include <queue>
 
 using namespace std;
 
 
 class Elevator
 {
-    
-    
  private:
   float Velocity;
   float Load_time;
   float Unload_time;
   int Capacity;
-    
  public:
-  vector<Person> People;    
+  queue<Person> up; 
+  queue<Person> down; 
   Elevator();
   float getVelocity();
   float getLoad_time();
   float getUnload_time();
   int getCapacity();
-  void addPerson();
-  void addPerson(Person p);
-    
+  void addUp(Person P); 
+  void addDown(Person P); 
 };
 
 #endif

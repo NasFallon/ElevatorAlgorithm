@@ -10,21 +10,20 @@
 
 using namespace std;
 
-
-
 Person::Person()
 {
   Start_floor = 0;
   End_floor = 1;
+  direction = false; 
 }
     
-Person::Person(int new_Start_floor, int new_End_floor)
+Person::Person(int start, int end)
 {
-  Start_floor = new_Start_floor;
-  End_floor = new_End_floor;
+  Start_floor = start;
+  End_floor = end;
   if(Start_floor - End_floor > 0)
-    direction = true; 
-  else direction = false; 
+    direction = Up; 
+  else direction = Down; 
 }
 
 bool Person::operator < (Person p){
@@ -32,7 +31,12 @@ bool Person::operator < (Person p){
     return true; 
   else return false; 
 }
-    
+ 
+int setLength(int n){
+  //will be computer by Elevator class for every Person object
+  length = n; 
+}
+   
 int Person::getStart_floor()
 {
   return Start_floor;
@@ -45,4 +49,8 @@ int Person::getEnd_floor()
 
 int Person::getDirection(){
   return direction; 
+}
+
+int Person::getLength(){
+  return length; 
 }

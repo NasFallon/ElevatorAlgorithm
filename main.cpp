@@ -43,7 +43,7 @@ int main(int argc, const char * argv[])
   g.Start_floor = 0; 
   g.End_floor = 53; //= new Person(1, 5); 
 
-  E.addPerson(a);
+  /*E.addPerson(a);
   E.addPerson(b);
   E.addPerson(c);
   E.addPerson(d);  
@@ -53,6 +53,6 @@ int main(int argc, const char * argv[])
   sort(E.People.begin(), E.People.end());
   for(int i = 0; i < E.People.size(); i++){
     cout << E.People.at(i).End_floor << endl; 
-  }
+    }*/
   return 0;
 }

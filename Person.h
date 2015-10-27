@@ -8,17 +8,22 @@
 
 #ifndef Elevator__Algorithm_Person_h
 #define Elevator__Algorithm_Person_h
+#define Up true 
+#define Down false 
 
 class Person{
  public: 
-  Person(); 
-  Person(int new_Start_floor, int new_End_floor); 
-  bool operator < (Person p); 
+  int length; //distance to the goal floor
   bool direction; //up = true, down = false
+
+  Person(); 
+  Person(int Startfloor, int Endfloor); 
+  bool operator < (Person p); //overloaded Person operator for algorithm sort
   int getStart_floor(); 
   int getEnd_floor(); 
   int Start_floor; 
   int End_floor; 
+  int getDirection();
 };
 
 #endif

@@ -10,6 +10,7 @@
 #include <vector>
 #include "Person.h"
 #include "Elevator.h"
+#include <queue> 
 
 using namespace std;
 
@@ -41,12 +42,12 @@ int Elevator::getCapacity()
   return Capacity;
 }
     
-void Elevator::addPerson()
-{
-  Person P;
-  People.push_back(P);
+void Elevator::addUp(Person p){
+  //add to up queue
+  up.push(p); 
 }
 
-void Elevator::addPerson(Person p){
-  People.push_back(p); 
+void Elevator::addDown(Person p){
+  //add to down queue
+  down.push(p); 
 }
